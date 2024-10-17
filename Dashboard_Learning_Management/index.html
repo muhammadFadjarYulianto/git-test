@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Belajar Aja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar">
+      <ul class="logo">
+        <li>
+          <i class="icon icon-logo"></i>
+          <a data-action="kembali-ke-content" href="#" class="nav-text"
+            >BelajarAja</a
+          >
+        </li>
+      </ul>
+      <button class="toggle-btn" id="toggle-btn"><i></i></button>
+      <ul class="nav-list">
+        <li>
+          <i class="icon icon-nav"></i>
+          <a data-action="kembali-ke-content" href="#" class="nav-text"
+            >Course</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- konten disebalah kanan sidebar -->
+    <div class="main-content">
+      <!-- header -->
+      <header class="header">
+        <div class="header-main">
+          <div class="logo-responsive">
+            <span>BelajarAja</span>
+          </div>
+          <div class="header-aksi">
+            <a href="profile.html"><div class="box profile"></div></a>
+          </div>
+        </div>
+        <div class="header-responsive">
+          <div class="item-header-responsive">
+            <div class="item-header-reponsive-utama">
+              <button class="menu" id="menu-responsive"></button>
+              <div class="garis"></div>
+              <a data-action="kembali-ke-content" class="menu-text">Course </a>
+            </div>
+            <span id="nav-content-2" class="hidden"> > Progress Belajar</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- content utama -->
+      <div class="content" id="content">
+        <!-- title -->
+        <h1>Course</h1>
+        <!-- Card content -->
+        <div class="container-course">
+          <!-- tab navigasi -->
+          <div class="course-nav">
+            <button id="nav-modul-dipelajari" class="active">
+              Kelas yang dipelajari
+            </button>
+            <button id="nav-modul-selesai">kelas yang diselesaikan</button>
+          </div>
+          <!-- course dijalani-->
+          <div class="course-detail">
+            <div class="title">
+              <i></i>
+              <span>Fullstack Developer</span>
+            </div>
+            <div class="deadline">
+              <span
+                >Deadline belajar seluruh kelas: 28 Februari 2025 - 23:59 (138
+                hari lagi)</span
+              >
+            </div>
+            <div class="garis"></div>
+            <div class="modul-course">
+              <span>Front-end</span>
+              <button id="lanjutkan-frontend">Lanjutkan</button>
+            </div>
+            <div class="modul-course">
+              <span>Back-end</span>
+              <button id="lanjutkan-backend">Lanjutkan</button>
+            </div>
+            <div class="modul-course">
+              <span>Dev-ops</span>
+              <button id="lanjutkan-devops">Lanjutkan</button>
+            </div>
+          </div>
+          <!-- course selesai -->
+          <div class="course-detail-selesai no-active">
+            <div class="modul-course">
+              <span>Product Management</span>
+              <button>Belajar Lagi</button>
+            </div>
+            <div class="modul-course">
+              <span>Copy Writer</span>
+              <button>Belajar Lagi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: none" class="content" id="content-2">
+        <!-- navigasi -->
+        <h1>
+          <a data-action="kembali-ke-content" href="">Course</a> >
+          <span>Koridor Kelas</span>
+        </h1>
+
+        <!-- Judul Koridor -->
+        <p class="judul-koridor">Modul: <span id="module-name"></span></p>
+
+        <!-- Content utama koridor kelas -->
+        <div id="progress-section" class="container-course">
+          <!-- Navigasi content koridor kelas -->
+          <div class="course-nav">
+            <button id="nav-materi" class="active">Progress Belajar</button>
+            <button id="nav-tugas">Tugas</button>
+          </div>
+
+          <!-- Content Koridor kelas -->
+          <!-- materi modul -->
+          <div id="materi-modul" class="course-detail">
+            <!-- Section judul koridor kelas -->
+            <div class="title">
+              <h2>Progress Belajar</h2>
+              <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+              </div>
+              <p id="progress-percent">0% Complete</p>
+              <button onclick="belajarLagi()">Lanjutkan Belajar</button>
+            </div>
+            <div class="garis"></div>
+
+            <!-- section Materi modul -->
+
+            <div class="modul-course">
+              <label>
+                <input type="checkbox" class="lesson-checkbox" data-index="0" />
+                <span id="materi-1">HTML Basics</span>
+              </label>
+              <span id="status-0" class="status">Belum Selesai</span>
+            </div>
+            <div class="modul-course">
+              <label>
+                <input type="checkbox" class="lesson-checkbox" data-index="1" />
+                <span id="materi-2">CSS Basics</span>
+              </label>
+              <span id="status-1" class="status">Belum Selesai</span>
+            </div>
+            <div class="modul-course">
+              <label>
+                <input type="checkbox" class="lesson-checkbox" data-index="2" />
+                <span id="materi-3">Responsive Design</span>
+              </label>
+              <span id="status-2" class="status">Belum Selesai</span>
+            </div>
+          </div>
+
+          <!-- tugas modul -->
+          <div id="tugas-modul" class="course-detail-selesai no-active">
+            <!-- Tugas Materi 1 -->
+            <div class="modul-course task-item">
+              <label>
+                <span id="tugas-1" class="modul-title-tugas"
+                  >HTML Fundamental</span
+                >
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Home Work</span>
+                    <input type="checkbox" class="task-checkbox" id="task-0" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(0)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Exam</span>
+                    <input type="checkbox" class="task-checkbox" id="task-1" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(1)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+              </label>
+            </div>
+            <!-- tugas Materi 2 -->
+            <div class="modul-course task-item">
+              <label>
+                <span id="tugas-2" class="modul-title-tugas"
+                  >CSS Framework</span
+                >
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Home Work</span>
+                    <input type="checkbox" class="task-checkbox" id="task-2" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(2)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Exam</span>
+                    <input type="checkbox" class="task-checkbox" id="task-3" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(3)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+              </label>
+            </div>
+            <!-- tugas Materi 3 -->
+            <div class="modul-course task-item">
+              <label>
+                <span id="tugas-3" class="modul-title-tugas"
+                  >JavaScript DOM</span
+                >
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Home Work</span>
+                    <input type="checkbox" class="task-checkbox" id="task-4" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(4)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+                <div class="content-tugas-modul">
+                  <div class="nama-materi">
+                    <span class="task-title">Exam</span>
+                    <input type="checkbox" class="task-checkbox" id="task-5" />
+                  </div>
+                  <button class="task-button" onclick="completeTask(5)">
+                    Kerjakan Tugas
+                  </button>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="custom-popup" class="popup hidden">
+      <div class="popup-content">
+        <p id="popup-message">Tugas sudah selesai!</p>
+        <button id="close-popup">Tutup</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

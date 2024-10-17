@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil | Belajar Aja</title>
+    <link rel="stylesheet" href="style_profile.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h2>Profil Saya</h2>
+      <div class="profile-info" id="profile-info">
+        <p><strong>Nama:</strong> <span id="name-display">John Doe</span></p>
+        <p>
+          <strong>Username:</strong> <span id="username-display">johndoe</span>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <span id="email-display">johndoe@example.com</span>
+        </p>
+      </div>
+      <div class="profile-edit hidden" id="profile-edit">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" value="John Doe" />
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="johndoe" />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="johndoe@example.com"
+        />
+
+        <button id="save-btn">Simpan</button>
+        <button id="cancel-btn">Batal</button>
+      </div>
+      <button id="edit-btn" class="edit-profile">Edit Profil</button>
+      <a href="index.html" class="btn-link">Kembali</a>
+    </div>
+
+    <!-- Custom Popup -->
+    <div id="custom-popup" class="popup hidden">
+      <div class="popup-content">
+        <p id="popup-message">Profil telah diperbarui!</p>
+        <button id="close-popup">Tutup</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script_profile.js"></script>
+  </body>
+</html>

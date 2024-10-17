@@ -1,0 +1,195 @@
+/* style.css */
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-info p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-info span {
+  color: #000;
+}
+
+.profile-edit label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-edit input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#edit-btn {
+  background-color: #8ad5be;
+  color: white;
+  width: 100%;
+}
+
+#save-btn {
+  background-color: #8ad5be;
+  color: white;
+  margin-right: 10px;
+}
+
+#cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Custom Popup Styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+#close-popup {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Styling for button-like link */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Warna background tombol */
+    color: #fff; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    border-radius: 5px; /* Buat pojokan tombol melengkung */
+    font-size: 16px; /* Ukuran font */
+    text-align: center; /* Agar teks di tengah */
+    transition: background-color 0.3s ease; /* Tambah efek transisi */
+    margin-top: 10px;
+}
+
+/* Styling saat tombol di-hover */
+.btn-link:hover {
+    background-color: #2980b9; /* Warna background saat di-hover */
+}
+
+/* Styling saat tombol diklik */
+.btn-link:active {
+    background-color: #1c5985; /* Warna background saat tombol diklik */
+}
+/* Media query untuk perangkat dengan lebar maksimal 768px (tablet dan ponsel) */
+@media (max-width: 768px) {
+  .profile-container {
+    width: 90%; /* Lebar menyesuaikan dengan ukuran layar */
+    padding: 20px; /* Mengurangi padding agar lebih pas di layar kecil */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Menyesuaikan ukuran font */
+  }
+
+  p,
+  label {
+    font-size: 1rem; /* Mengurangi ukuran font */
+  }
+
+  input {
+    padding: 7px; /* Menyesuaikan ukuran input */
+  }
+
+  button {
+    padding: 8px 12px; /* Ukuran tombol lebih kecil */
+    font-size: 14px; /* Ukuran font pada tombol lebih kecil */
+  }
+
+  .popup-content {
+    width: 80%;
+  }
+}
+
+/* Media query untuk perangkat dengan lebar maksimal 480px (ponsel kecil) */
+@media (max-width: 480px) {
+  .profile-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  label {
+    font-size: 0.9rem;
+  }
+
+  input {
+    padding: 5px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .popup-content {
+    width: 90%;
+    padding: 10px;
+  }
+}
